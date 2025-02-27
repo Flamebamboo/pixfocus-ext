@@ -1,14 +1,10 @@
-body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 400px;
-  min-height: 500px;
-  background-color: #efb6c8;
+@import "tailwindcss";
+
+@font-face {
+  font-family: PixelCodeBold;
+  src: url("/assets/fonts/PixelCode-Bold.ttf");
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+@theme {
+  --font-pixelbold: PixelCodeBold;
 }

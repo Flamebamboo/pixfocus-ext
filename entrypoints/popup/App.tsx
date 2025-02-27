@@ -1,12 +1,62 @@
-import { useState } from "react";
-import reactLogo from "@/assets/react.svg";
-import wxtLogo from "/wxt.svg";
-import style from "/style.css";
+import React, { useEffect, useState } from "react";
+import "./style.css";
+import { TimerArt } from "@/components/TimerArtWeb";
+import Timer from "@/components/Timer";
+import useTimerStore from "@/store/timerStore";
+import useThemeStore from "@/store/themeStore";
+import { useTimer } from "@/components/useTimer";
+import SplitButton from "@/components/SplitButton";
 
 function App() {
+  // Move the hook inside the component
+  const duration = useTimerStore((state) => state.duration);
+  const [isSplit, setIsSplit] = useState(false);
+
+  const {
+    timeRemaining,
+    isActive,
+    start,
+    pause,
+    stop,
+    getProgress,
+    isComplete,
+  } = useTimer(duration);
+
+  // Update split button state based on timer status
+  useEffect(() => {
+    setIsSplit(!isActive);
+  }, [isActive]);
+
+  // Define actions for the SplitButton
+  const mainAction = {
+    onPress: pause,
+  };
+
+  const leftAction = {
+    onPress: start,
+  };
+
+  const rightAction = {
+    onPress: stop,
+  };
+
+  const colors = useThemeStore((state) => state.colors);
   return (
-    <div>
-      <h1>Hello</h1>
+    <div
+      className="w-[400px] h-full flex flex-col items-center justify-center"
+      style={{ backgroundColor: colors.primary }}
+    >
+      <TimerArt variant="COFFEE_CUP" progress={getProgress()} />
+
+      <Timer time={timeRemaining} />
+      <div className="p-8 w-full">
+        <SplitButton
+          mainAction={mainAction}
+          leftAction={leftAction}
+          rightAction={rightAction}
+          splitted={isSplit}
+        />
+      </div>
     </div>
   );
 }
