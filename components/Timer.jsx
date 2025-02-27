@@ -11,7 +11,7 @@ const Timer = ({ time }) => {
   };
 
   return (
-    <div className="text-4xl font-pixelbold text-white">
+    <div className="text-5xl font-pixelmed text-white">
       {formatTimeDisplay(time)}
     </div>
   );

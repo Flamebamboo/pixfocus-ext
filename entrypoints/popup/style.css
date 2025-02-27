@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: PixelCodeBold;
-  src: url("/assets/fonts/PixelCode-Bold.ttf");
+  font-family: PixelCodeMedium;
+  src: url("/assets/fonts/PixelCode-Medium.ttf");
 }
 
 @theme {
-  --font-pixelbold: PixelCodeBold;
+  --font-pixelmed: PixelCodeMedium;
 }

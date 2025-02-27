@@ -6,6 +6,7 @@ import useTimerStore from "@/store/timerStore";
 import useThemeStore from "@/store/themeStore";
 import { useTimer } from "@/components/useTimer";
 import SplitButton from "@/components/SplitButton";
+import { Link } from "react-router";
 
 function App() {
   // Move the hook inside the component
@@ -47,8 +48,10 @@ function App() {
       style={{ backgroundColor: colors.primary }}
     >
       <TimerArt variant="COFFEE_CUP" progress={getProgress()} />
+      <Link to="/configure">
+        <Timer time={timeRemaining} />
+      </Link>
 
-      <Timer time={timeRemaining} />
       <div className="p-8 w-full">
         <SplitButton
           mainAction={mainAction}
