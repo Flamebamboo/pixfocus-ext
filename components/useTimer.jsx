@@ -8,7 +8,6 @@ export const useTimer = (initialDuration) => {
   const [timer, setTimer] = useState(null);
   const [isComplete, setIsComplete] = useState(false);
 
-  // useCallback for handleTimerComplete to avoid recreation in the dependency array
   const handleTimerComplete = useCallback(() => {
     setIsComplete(true);
     setIsActive(false);

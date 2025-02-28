@@ -3,6 +3,7 @@ export {}
 declare global {
   const AnimationAssets: typeof import('/Users/acap/pixfocus-ext/utils/animationAssets')['AnimationAssets']
   const ContentScriptContext: typeof import('wxt/client')['ContentScriptContext']
+  const DurationPicker: typeof import('/Users/acap/pixfocus-ext/components/DurationPicker')['default']
   const InvalidMatchPattern: typeof import('wxt/sandbox')['InvalidMatchPattern']
   const MatchPattern: typeof import('wxt/sandbox')['MatchPattern']
   const MigrationError: typeof import('wxt/storage')['MigrationError']

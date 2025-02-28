@@ -42,12 +42,22 @@ function App() {
   };
 
   const colors = useThemeStore((state) => state.colors);
+  const currentVariant = useThemeStore((state) => state.currentTheme);
+
   return (
     <div
-      className="w-[400px] h-full flex flex-col items-center justify-center"
+      className="w-[400px] h-[500px] flex flex-col items-center justify-center"
       style={{ backgroundColor: colors.primary }}
     >
-      <TimerArt variant="COFFEE_CUP" progress={getProgress()} />
+      <Link
+        to="/variants"
+        className="cursor-pointer hover:opacity-90 transition-opacity"
+      >
+        <TimerArt
+          variant={currentVariant || "COFFEE_CUP"}
+          progress={getProgress()}
+        />
+      </Link>
       <Link to="/configure">
         <Timer time={timeRemaining} />
       </Link>

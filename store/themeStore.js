@@ -17,7 +17,7 @@ const themeDefinitions = {
     accent: "#A94A4A",
     text: "#ffff",
     iconFill: "#241515",
-    buttonBorder: "#000",
+    buttonBorder: "#fff",
   },
   OWL: {
     primary: "#FFF8E5",
@@ -25,7 +25,7 @@ const themeDefinitions = {
     accent: "#F9A846",
     text: "#BC9179",
     iconFill: "#F8F2DF",
-    buttonBorder: "#FFF8E5",
+    buttonBorder: "#000",
   },
 
   RABBIT: {
