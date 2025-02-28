@@ -172,7 +172,7 @@ const DurationPicker: React.FC<DurationPickerProps> = ({
                 borderBottomWidth: "4px",
                 borderRightWidth: "4px",
               }}
-            ></div>
+            >
               {formatTwoDigits(minutes)}
             </div>
 
