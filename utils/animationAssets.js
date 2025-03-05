@@ -1,7 +1,7 @@
 // Import assets using relative paths
-import rabbit from "../assets/Rabbit.gif";
+import rabbit from "../assets/rabbits.gif";
 import firecamp from "../assets/firecamp.gif";
-import owl from "../assets/owl.gif";
+import owl from "../assets/owls.gif";
 
 export const AnimationAssets = {
   RABBIT: rabbit,
