@@ -1,8 +1,8 @@
 {
-  "name": "wxt-react-starter",
-  "description": "manifest.json description",
+  "name": "PixFocus: Gamified, Cozy Visual Focus Timers",
+  "description": "PixFocus is a gamified, cozy, pixel art with cute visual timers and neo-brutalism styling",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "wxt",
